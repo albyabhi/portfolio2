@@ -1,0 +1,54 @@
+/* Portfolio container styling */
+.portfolio-container {
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Align center */
+    gap: 20px; /* Space between the sections */
+    padding: 20px; /* Optional, add padding for better spacing */
+}
+
+/* Box styling */
+.portfolio-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the image and the link */
+    text-align: center; /* Centers text */
+}
+
+/* Instagram link styling */
+.instagram-link {
+    font-size: 18px;
+    color: #0073e6; /* Instagram-like blue */
+    text-decoration: none;
+}
+
+.instagram-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Image list box with gradient animation */
+.image-list-box {
+    background: linear-gradient(90deg, #333, #555); /* Initial gradient background */
+    background-size: 200% 100%; /* Larger background for smooth animation */
+    animation: gradientFlow 5s ease infinite; /* Apply gradient animation */
+    border-radius: 16px; /* Rounded corners */
+    padding: 20px; /* Padding around the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for lifted effect */
+}
+
+/* Gradient animation */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+

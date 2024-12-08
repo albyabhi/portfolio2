@@ -1,0 +1,100 @@
+/* Appbar Styling */
+.appbar {
+    background: linear-gradient(90deg, #333, #555); /* Initial gradient background */
+    background-size: 200% 100%; /* Make the gradient larger for smooth animation */
+    animation: gradientFlow 5s ease infinite; /* Animation for gradient flow */
+    border-radius: 15px; /* Apply the border radius */
+    padding: 10px 30px; /* Add padding to the appbar */
+    margin: 0 auto; /* Center the appbar horizontally */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for the glass effect */
+    position: relative; /* Ensure it doesn't overlap */
+    max-width: 1200px; /* Limit maximum width */
+    width: auto; /* Adjust width dynamically */
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+/* Gradient flow animation */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navigation bar styles */
+.nav-links {
+    display: flex; /* Make the navigation items align horizontally */
+    justify-content: space-around; /* Distribute space evenly between the items */
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap; /* Allow the items to wrap for smaller screens */
+    margin: 0;
+}
+
+/* Navigation item styles */
+.nav-item {
+    font-family: 'Parkinsans', sans-serif;
+    color: white; /* Set the text color */
+    padding: 10px 30px; /* Add padding inside the buttons */
+    border: none; /* Remove any default border */
+    border-radius: 5px; /* Optional: Rounded corners for buttons */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    background-color: transparent; /* Remove the background color */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    font-size: 16px; /* Base font size */
+}
+
+.nav-item:hover {
+    background-color: #555; /* Change background color on hover */
+}
+
+/* Highlight the selected button */
+.nav-item.selected {
+    
+    background-color: #444; /* Set a background color for the selected button */
+    color: #fff; /* Optional: change text color for the selected item */
+    
+}
+
+/* Responsive Design: For Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    .appbar {
+        padding: 8px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .nav-item {
+        font-size: 14px; /* Slightly smaller font size for tablets */
+        padding: 8px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Responsive Design: For Mobile Devices */
+@media (max-width: 768px) {
+    .appbar {
+        padding: 8px 15px; /* Adjust padding for mobile screens */
+        max-width: 90%; /* Ensure the appbar fits within the screen */
+    }
+
+    .nav-links {
+        justify-content: space-evenly; /* Space out the items evenly */
+    }
+
+    .nav-item {
+        font-size: 12px; /* Further reduce the font size for mobile */
+        padding: 6px 15px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        font-size: 12px; /* Keep font size small for mobile */
+        padding: 6px 12px; /* Adjust padding */
+    }
+}
